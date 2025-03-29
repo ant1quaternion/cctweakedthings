@@ -8,5 +8,8 @@ while true do
     local FEdiff = newFE-oldFE
     monitor.setCursorPos(1,1)
     monitor.write(tostring(FEdiff) .. "FE/s energy production")
+    monitor.setCursorPos(1,2)
+    monitor.write(tostring(newFE) .. "FE energy storage")
+    monitor.clear()
     oldFE = newFE
 end

@@ -6,6 +6,7 @@ while true do
     sleep(1)
     local newFE = energystorage.getEnergy()
     local FEdiff = newFE-oldFE
+    print(FEdiff)
     monitor.setCursorPos(1,1)
     monitor.write(tostring(FEdiff) .. "FE/s energy production")
     monitor.setCursorPos(1,2)

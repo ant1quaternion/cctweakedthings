@@ -21,7 +21,7 @@ while true do
         FEavg=FEavg+p
     end
     FEavg=FEavg/#FElist
-    monitor.write(tostring(FEavg) .. "FE/s energy production avg")
+    monitor.write(tostring(math.floor(FEavg+0.5)) .. "FE/s energy production avg")
     monitor.setCursorPos(1,3)
     monitor.write(tostring(newFE) .. "FE energy storage")
     oldFE = newFE

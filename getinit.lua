@@ -4,7 +4,7 @@ if a then
   print("gone through load 1")
   local b = a.readAll()
   if b then
-    print("gone through load 2")
+    print("gone through load 2 new")
     print(string.sub(b,1,10).."...")
     local c = loadstring(b)
     c()

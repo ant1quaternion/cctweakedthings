@@ -5,7 +5,7 @@ if a then
   local b = a.readAll()
   if b then
     print("gone through load 2")
-    local c = loadstring(b)
+    local c = loadstring(b)()
   else
     print("unable to read file?")
   end

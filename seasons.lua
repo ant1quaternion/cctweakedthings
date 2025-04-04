@@ -1,3 +1,4 @@
+print("awake")
 local monitor = peripheral.find("monitor")
 while true do
     monitor.clear()

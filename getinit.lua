@@ -5,7 +5,7 @@ if a then
   local b = a.readAll()
   if b then
     print("gone through load 2 new")
-    print(string.sub(b,1,10).."...")
+    print(string.sub(b,1,30).."...")
     local c = loadstring(b)
     c()
   else

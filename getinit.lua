@@ -1,3 +1,4 @@
+return function(scripttoload)
 local a = http.get(scripttoload)
 if a then
   print("gone through load 1")
@@ -10,4 +11,5 @@ if a then
   end
 else
   print("file link not valid?")
+end
 end

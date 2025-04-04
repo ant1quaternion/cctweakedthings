@@ -5,3 +5,4 @@ while true do
     monitor.setCursorPos(1,1)
     monitor.write("test")
     sleep(10)
+end

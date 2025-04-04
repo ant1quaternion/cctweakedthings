@@ -1,1 +1,1 @@
-local scripttoload = "https://github.com/ant1quaternion/cctweakedthings/blob/main/seasons.lua" local func = loadstring(http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/getinit.lua").readAll())() func(scripttoload)
+local scripttoload = "https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/seasons.lua" local func = loadstring(http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/getinit.lua").readAll())() func(scripttoload)

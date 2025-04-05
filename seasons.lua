@@ -26,11 +26,14 @@ function getUnmodifiedSeason(day)
   end
   return subs.." "..season
 end
+function getSubSeasonDate(day)
+  return (day-1)%8+1
+end
 while true do
   monitor.clear()
   monitor.setCursorPos(1,1)
   monitor.write(tostring(os.day("ingame")).." day(s) elapsed")
   monitor.setCursorPos(1,2)
-  monitor.write(getUnmodifiedSeason(os.day("ingame")))
+  monitor.write(getUnmodifiedSeason(os.day("ingame")) .. " ("..tostring(getSubSeasonDate(os.day("ingame"))).."/8)")
   sleep(10)
 end

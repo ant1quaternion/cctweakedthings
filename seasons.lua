@@ -32,7 +32,7 @@ end
 while true do
   monitor.clear()
   monitor.setCursorPos(1,1)
-  monitor.write(tostring(os.day("ingame")).." day(s) elapsed")
+  monitor.write(tostring(os.day("ingame")-1).." day(s) elapsed")
   monitor.setCursorPos(1,2)
   monitor.write(getUnmodifiedSeason(os.day("ingame")) .. " ("..tostring(getSubSeasonDate(os.day("ingame"))).."/8)")
   sleep(10)

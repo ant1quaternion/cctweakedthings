@@ -1,9 +1,6 @@
 print("awake")
 local monitor = peripheral.find("monitor")
 local inv = peripheral.find("minecraft:chest")
-function getSeason(day) 
-  day/=8
-end
 while true do
   monitor.clear()
   monitor.setCursorPos(1,1)

@@ -1,5 +1,5 @@
 --https://github.com/ant1quaternion/cctweakedthings/blob/main/votv_startup.wav
-local dfpwm = require("cc.audio.dfpwm")
+local dfpwm = _G.require("cc.audio.dfpwm")
 local modem = peripheral.find("modem") or error("No modem attached", 0)
 local UUID = modem.getNameLocal()
 local process = nil

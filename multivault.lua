@@ -49,8 +49,8 @@ for str in string.gmatch(logo, "([^".."\n".."]+)") do
     monitor.write(str)
     i=i+1
 end
-monitor.setCursorPos(1,i)
-monitor.setTextColor(colors.black)
+monitor.setCursorPos(squee,i)
+monitor.setTextColor(colors.white)
 monitor.write("meadowOS")
 if speaker and funny ~= nil and funny ~= "" then
     local decoder = dfpwm.make_decoder()

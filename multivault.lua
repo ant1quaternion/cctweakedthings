@@ -19,11 +19,11 @@ modem.transmit(1,1,{["from"]="host",["to"]="all",["data"]=code})
 local speaker = peripheral.find("speaker") or print("Speaker must be attached for the funny")
 local funny = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/votv_startup.wav").readAll()
 if speaker and funny ~= nil and funny ~= "" then
-
     local decoder = dfpwm.make_decoder()
-        local buffer = decoder(funny)
-
+    for v in string.gmatch(s, "([^".."\n".."]+)") do
+        local buffer = decoder(v)
         while not speaker.playAudio(buffer) do
             os.pullEvent("speaker_audio_empty")
         end
+    end
 end

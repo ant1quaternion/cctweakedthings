@@ -39,6 +39,7 @@ end
 local logoheight = 12
 local logowidth = 14
 local monitor = peripheral.find("monitor")
+local x,y = monitor.getSize()
 monitor.clear()
 monitor.setTextColor(colors.orange)
 local i = math.floor(y/2-logoheight/2+0.5)

@@ -13,7 +13,7 @@ co = coroutine.create(function()
         end
     end
 end)
-co.resume()
+coroutine.resume(co)
 modem.transmit(1,1,{["from"]="host",["to"]="all",["data"]=code})
 local speaker = peripheral.find("speaker") or print("Speaker must be attached for the funny")
 local funny = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/votv_startup.wav").readAll()

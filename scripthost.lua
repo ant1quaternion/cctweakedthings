@@ -11,7 +11,7 @@ while true do
         coroutine.resume(process)
         process = nil
     end
-    if message["to"]==UUID then
+    if message["to"]==UUID or message["to"]=="all" then
         kill = false
         process = coroutine.create(loadstring("if kill then return end "..message.data))
         coroutine.resume(process)

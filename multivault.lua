@@ -1,4 +1,5 @@
 --https://github.com/ant1quaternion/cctweakedthings/blob/main/votv_startup.wav
+local dfpwm = require("cc.audio.dfpwm")
 local modem = peripheral.find("modem") or error("No modem attached", 0)
 local UUID = modem.getNameLocal()
 local process = nil
@@ -18,7 +19,6 @@ modem.transmit(1,1,{["from"]="host",["to"]="all",["data"]=code})
 local speaker = peripheral.find("speaker") or print("Speaker must be attached for the funny")
 local funny = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/votv_startup.wav").readAll()
 if speaker and funny ~= nil and funny ~= "" then
-    local dfpwm = require("cc.audio.dfpwm")
 
     local decoder = dfpwm.make_decoder()
         local buffer = decoder(funny)

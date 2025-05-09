@@ -45,8 +45,12 @@ monitor.setTextColor(colors.orange)
 local i = math.floor(y/2-logoheight/2+0.5)
 local squee = math.floor(x/2-logowidth/2+0.5)
 for str in string.gmatch(logo, "([^".."\n".."]+)") do
-    monitor.setCursorPos(squee,i)
-    monitor.write(str)
+    for b = 1,string.len(str) do
+        monitor.setCursorPos(squee+b-1,i)
+        if string.sub(str,b,b) == "@" then
+            monitor.blit(" ",colors.orange,colors.orange)
+        end
+    end
     i=i+1
 end
 monitor.setCursorPos(squee,i)

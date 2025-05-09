@@ -20,18 +20,18 @@ local speaker = peripheral.find("speaker") or print("Speaker must be attached fo
 local funny = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/votv_startup.txt").readAll()
 -- display logo
 local logo = [[
-         ■■■
-  ■■■   ■   ■
- ■   ■ ■     ■
-■     ■■     ■
-■     ■ ■   ■ 
- ■   ■   ■■■
-  ■■■ ■■■
-     ■   ■
-    ■     ■
-    ■     ■
-     ■   ■
-      ■■■
+         @@@
+  @@@   @   @
+ @   @ @     @
+@     @@     @
+@     @ @   @ 
+ @   @   @@@
+  @@@ @@@
+     @   @
+    @     @
+    @     @
+     @   @
+      @@@
    meadowOS]]
 local monitor = peripheral.find("monitor")
 monitor.clear()

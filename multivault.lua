@@ -20,7 +20,7 @@ local speaker = peripheral.find("speaker") or print("Speaker must be attached fo
 local funny = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/votv_startup.wav").readAll()
 if speaker and funny ~= nil and funny ~= "" then
     local decoder = dfpwm.make_decoder()
-    for v in string.gmatch(s, "([^".."\n".."]+)") do
+    for v in string.gmatch(funny, "([^".."\n".."]+)") do
         local buffer = decoder(v)
         while not speaker.playAudio(buffer) do
             os.pullEvent("speaker_audio_empty")

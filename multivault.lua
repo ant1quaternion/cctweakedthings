@@ -4,7 +4,7 @@ local UUID = modem.getNameLocal()
 local process = nil
 local code = http.get("https://raw.githubusercontent.com/ant1quaternion/cctweakedthings/refs/heads/main/multivaulthost.lua").readAll()
 modem.open(1)
-local co = coroutine.create(function()
+co = coroutine.create(function()
     modem.transmit(1,1,{["from"]=UUID,["to"]="host",["data"]="connect"})
     while true do
         event, side, frequency, replyFrequency, message, distance = os.pullEvent("modem_message")

@@ -33,15 +33,22 @@ local logo = [[
      @   @
       @@@
     ]]
+function floorDivision(a,b)
+    return math.floor(a/b+0.5)
+end
+local logoheight = 12
+local logowidth = 14
 local monitor = peripheral.find("monitor")
 monitor.clear()
 monitor.setTextColor(colors.orange)
-local i = 1
+local i = math.floor(y/2-logoheight/2+0.5)
+local squee = math.floor(x/2-logowidth/2+0.5)
 for str in string.gmatch(logo, "([^".."\n".."]+)") do
-    monitor.setCursorPos(1,i)
+    monitor.setCursorPos(squee,i)
     monitor.write(str)
     i=i+1
 end
+monitor.setCursorPos(1,i)
 monitor.setTextColor(colors.black)
 monitor.write("meadowOS")
 if speaker and funny ~= nil and funny ~= "" then

@@ -1,4 +1,3 @@
--- deprecated
 return function(scripttoload)
 local a = http.get(scripttoload)
 if a then

@@ -35,8 +35,12 @@ local logo = [[
    meadowOS]]
 local monitor = peripheral.find("monitor")
 monitor.clear()
-monitor.setCursorPos(1,1)
-monitor.write(logo)
+local i = 1
+for str in string.gmatch(logo, "([^".."\n".."]+)") do
+    monitor.setCursorPos(1,i)
+    monitor.write(str)
+    i=i+1
+end
 if speaker and funny ~= nil and funny ~= "" then
     local decoder = dfpwm.make_decoder()
     local maxlen = 16*1024
@@ -52,7 +56,6 @@ if speaker and funny ~= nil and funny ~= "" then
             bufthing = ""
         end
     end
-else
-    os.sleep(5)
 end
+os.sleep(5)
 monitor.clear()

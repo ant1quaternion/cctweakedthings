@@ -48,7 +48,7 @@ for str in string.gmatch(logo, "([^".."\n".."]+)") do
     for b = 1,string.len(str) do
         monitor.setCursorPos(squee+b-1,i)
         if string.sub(str,b,b) == "@" then
-            monitor.blit(" ",tostring(colors.orange),tostring(colors.orange))
+            monitor.blit(" ",tostring(colors.white),tostring(colors.white))
         end
     end
     i=i+1
